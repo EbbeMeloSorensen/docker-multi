@@ -24,16 +24,15 @@ after_success:
   - docker push ebbemelosorensen/multi-server
   - docker push ebbemelosorensen/multi-worker
 
-  deploy:
-    edge: true
-    provider: elasticbeanstalk
-    region: "us-east-2"
-    app: "multi-docker"
-    env: "MultiDocker-env"
-    bucket_name: "elasticbeanstalk-us-east-2-907718596887"
-    bucket-path: "docker-multi"
-    on:
-      branch: master
-      acess_key_id: $AWS_ACCESS_KEY
-      secret_access_key: "$AWS_SECRET_KEY"
+  # deploy:
+  #   provider: elasticbeanstalk
+  #   region: "us-east-2"
+  #   app: "multi-docker"
+  #   env: "MultiDocker-env"
+  #   bucket_name: "elasticbeanstalk-us-east-2-907718596887"
+  #   bucket-path: "docker-multi"
+  #   on:
+  #     branch: master
+  #     acess_key_id: $AWS_ACCESS_KEY
+  #     secret_access_key: "$AWS_SECRET_KEY"
   
